@@ -5,6 +5,8 @@ import java.util.Map;
 
 import com.lis2.gulimall.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,7 @@ import com.lis2.common.utils.R;
  * @date 2020-12-08 19:07:22
  */
 @RestController
+@RefreshScope
 @RequestMapping("member/member")
 public class MemberController {
     @Autowired
